@@ -17,57 +17,26 @@ protected:
 	char* email;
 
 public:
+	Usuario();
 	Usuario(int id, char*nombre, char * apellido, char * contrasena, char * email);
 	Usuario::Usuario(Usuario &u);
 	virtual ~Usuario();
 
-	char* getApellido() const {
-		return apellido;
-	}
+	char* getApellido() const ;
+	void setApellido(char *apellido) ;
+	char* getContrasena() const ;
+	void setContrasena(char *contrasena) ;
+	char* getEmail() const ;
+	int getId() const ;
+	int getLongitudApellido() const ;
+	int getLongitudContrasena() const ;
+	int getLongitudEmail() const ;
+	int getLongitudnombre() const ;
+	char* getNombre() const ;
+	void setNombre(char *nombre) ;
 
-	void setApellido(char *apellido) {
-		this->apellido = apellido;
-	}
+	virtual void imprimir();
 
-	char* getContrasena() const {
-		return contrasena;
-	}
-
-	void setContrasena(char *contrasena) {
-		this->contrasena = contrasena;
-	}
-
-	char* getEmail() const {
-		return email;
-	}
-
-	int getId() const {
-		return id;
-	}
-
-	int getLongitudApellido() const {
-		return longitudApellido;
-	}
-
-	int getLongitudContrasena() const {
-		return longitudContrasena;
-	}
-
-	int getLongitudEmail() const {
-		return longitudEmail;
-	}
-
-	int getLongitudnombre() const {
-		return longitudnombre;
-	}
-
-	char* getNombre() const {
-		return nombre;
-	}
-
-	void setNombre(char *nombre) {
-		this->nombre = nombre;
-	}
 };
 
 #endif /* USUARIO_H_ */

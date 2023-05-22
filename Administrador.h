@@ -17,45 +17,25 @@ protected:
 	char* email;
 
 public:
+	Administrador();
 	Administrador(int id, char*nombre, char *apellido, char* contrasena, char * email);
 	Administrador(Administrador &a);
 	virtual ~Administrador();
 
-	char* getApellido() const {
-		return apellido;
-	}
+	char* getApellido() const ;
+	void setApellido(char *apellido) ;
+	char* getContrasena() const ;
+	void setContrasena(char *contrasena) ;
+	char* getEmail() const ;
+	int getId() const ;
+	int getLongitudApellido() const ;
+	int getLongitudContrasena() const ;
+	int getLongitudEmail() const ;
+	int getLongitudnombre() const ;
+	char* getNombre() const ;
+	void setNombre(char *nombre) ;
 
-	void setApellido(char *apellido) {
-		this->apellido = apellido;
-	}
-
-	char* getContrasena() const {
-		return contrasena;
-	}
-
-	void setContrasena(char *contrasena) {
-		this->contrasena = contrasena;
-	}
-
-	char* getEmail() const {
-		return email;
-	}
-
-	void setEmail(char *email) {
-		this->email = email;
-	}
-
-	int getId() const {
-		return id;
-	}
-
-	char* getNombre() const {
-		return nombre;
-	}
-
-	void setNombre(char *nombre) {
-		this->nombre = nombre;
-	}
+	virtual void imprimir();
 
 	//TRABAJO ANTERIOR
 	void ventanaSesiones(int i);

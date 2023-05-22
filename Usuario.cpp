@@ -8,6 +8,12 @@
 #include "Usuario.h"
 
 #include <string.h>
+#include <iostream>
+using namespace std;
+
+Usuario::Usuario(){
+
+}
 
 Usuario::Usuario(int id, char*nombre, char *apellido, char* contrasena, char * email){
 	this->id=id;
@@ -34,3 +40,55 @@ Usuario::Usuario(Usuario &u){
 Usuario::~Usuario() {
 	delete [] nombre,apellido,contrasena,email;
 }
+char* getApellido() const {
+		return apellido;
+}
+
+void Usuario::setApellido(char *apellido) {
+	this->apellido = apellido;
+}
+
+char* Usuario::getContrasena() const {
+	return contrasena;
+}
+
+void Usuario::setContrasena(char *contrasena) {
+	this->contrasena = contrasena;
+}
+
+char* Usuario::getEmail() const {
+	return email;
+}
+
+int Usuario::getId() const {
+	return id;
+}
+
+int Usuario::getLongitudApellido() const {
+	return longitudApellido;
+}
+
+int Usuario::getLongitudContrasena() const {
+	return longitudContrasena;
+}
+
+int Usuario:: getLongitudEmail() const {
+	return longitudEmail;
+}
+
+int Usuario::getLongitudnombre() const {
+	return longitudnombre;
+}
+
+char* Usuario::getNombre() const {
+	return nombre;
+}
+
+void Usuario::setNombre(char *nombre) {
+	this->nombre = nombre;
+}
+
+virtual void Usuario::imprimir(){
+	cout<<this->id<<";"<<this->nombre<<";"<<<<this->apellido<<";"<<this->email<<";"<<this->contrasena<<";"<<endl;
+}
+
